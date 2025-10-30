@@ -1,5 +1,5 @@
-## CV template
-# Viviana Palacio. 2025.
+# CV template
+### Viviana Palacio. 2025.
 
 I created this TeX template based on Nick's CV. 
 Some details:
