@@ -1,0 +1,72 @@
+
+% used for figures:
+\usepackage{subfigure,graphicx}
+\usepackage{wrapfig}
+% math fonts etc.:
+\usepackage{amsmath,amsfonts,amsthm,latexsym,amssymb,euscript,xr}
+
+\usepackage{xcolor}
+
+
+% powerful color control for tables: 
+\usepackage[table]{xcolor}
+% more color control
+\usepackage{color,colortbl,tabularx}
+% allow symbol font (type the character number)
+\usepackage{pifont}
+\usepackage{sansmath}
+\sansmath
+
+\usepackage{eso-pic,adjustbox}
+
+% Enforce margins and no hyphenation with these
+ \hyphenpenalty=1000
+ \tolerance=2000
+ \emergencystretch=0.1em
+
+\usepackage{ragged2e}
+\usepackage[none]{hyphenat}
+
+\usepackage[numbers,super,sort&compress]{natbib}
+%\bibliographystyle{unsrtnat} % to get the references included in the numbering
+% Compact natbib bibliography
+
+\makeatletter
+\setlength{\bibsep}{1pt }   % vertical space between items (natbib uses \bibsep)
+\setlength{\bibhang}{0.5em}              % small hanging indent
+% Change label format from [1] to "1."
+\renewcommand{\@biblabel}[1]{#1.}
+% Shrink the font for the bibliography only
+\let\oldthebibliography\thebibliography
+\let\endoldthebibliography\endthebibliography
+\renewenvironment{thebibliography}[1]%
+  {\begin{oldthebibliography}{#1}%
+   \footnotesize
+   \setlength{\itemsep}{\bibsep}%
+   \setlength{\parsep}{0pt}%
+   \setlength{\parskip}{0pt}%
+   \setlength{\leftmargin}{\bibhang}%
+   \setlength{\itemindent}{\bibhang}%
+   }
+  {\end{oldthebibliography}}
+\makeatother
+
+% easy package for proper magnitude + unit pairs in the text
+\usepackage{siunitx}
+    \sisetup{detect-weight,detect-mode}
+
+% Paragraph style (compact)
+\setlength{\parindent}{2mm}
+\setlength{\parskip}{0pt}
+
+% Displays
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+% Captions
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{6pt}
+% Lists (use enumitem, not global \itemsep)
+\usepackage{enumitem}
+\setlist{nosep}
+
+\usepackage{lipsum}

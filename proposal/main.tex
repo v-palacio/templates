@@ -1,0 +1,84 @@
+\documentclass{proposal}
+
+% all packages loaded and new definitions are in the preamble file
+\input{preamble.tex} 
+
+\runningtitle{Header field 1}
+\runningauthor{Header field 2}
+\title{Fancy Research Proposal}
+\author{Author list}
+\date{}
+
+\begin{document}
+\justifying
+\textbf{\underline{Section 1}} 
+\lipsum[1] \cite{Beris1994}
+
+\textbf{\underline{Section 2}} 
+\lipsum[2-3] \cite{deGennes}
+
+\textbf{\underline{Section 3}} 
+\begin{wrapfigure}{R}{0.5\textwidth}
+    \vspace{-2\baselineskip}  % move up
+    \includegraphics[width=0.5\textwidth]{fig/JacksonLabLogo.png}
+    %\vspace{-4mm} % spacing between figure and caption
+    %\caption{}
+    \vspace{-1.8\baselineskip}    % tighten below the figure
+\end{wrapfigure}
+\lipsum[3-5]
+
+\textbf{Subsection 3.1}
+\textit{\lipsum[1]}\cite{Palacio_2025}.
+
+\lipsum[5-8]
+
+% \textbf{Overview:}
+% \textbf{I will develop machine learning (ML)-guided frameworks that integrate molecular modeling and continuum theory to predict and control orientational order in chemically heterogeneous soft matter. This approach connects molecular structure, interfacial behavior, and processing conditions to emergent macroscopic properties, establishing a foundation for predictive materials design.} 
+% %Food formulations provide a representative system for demonstrating these capabilities and for deriving transferable principles applicable to polymers, biomaterials, and complex fluids.
+
+% My research advances Imperial's Chemical Engineering strengths in multiscale modeling and process systems by introducing data-driven methods that extend theoretical understanding of soft and functional materials. By implementing elements from Thermodynamics, Transport Phenomena, and Machine Learning, my program can contribute to several groups within the department. \textit{This framework complements Imperial’s growing use of artificial intelligence in chemical and materials engineering and aligns with its mission to connect fundamental insight with sustainable technological innovation.}
+
+% \textbf{Background}
+% Chemically heterogeneous soft matter presents exciting challenges for Chemical Engineering. In polymers, biomaterials, and colloidal suspensions, the interplay between composition, molecular order, transport, and mechanics determines mechanical and optical properties that arise far from equilibrium. Interfaces, flow, and confinement impose anisotropy and drive restructuring, yet experiments typically reveal only correlations between processing and performance, and no general design guidelines. \textit{Developing predictive and transferable rules that connect molecular design to material response remains an open problem.}
+
+% Food systems like infant formula and plant-based alternatives exemplify this complexity. Their stability, rheology, and texture emerge from coupled phenomena such as phase coexistence, surfactant-driven interfacial organization, and flow-induced restructuring. However, their formulation is restricted to regulatory measures, safety considerations, and supply chain availability. Our ability to change the formulation in a restricted chemical space while maintaining an outcome requires knowledge about their stability and how their molecular structure will translate to the macroscale.  \textit{It is thus necessary to have a framework for understanding these multicomponent systems, where molecular specificity and processing history jointly control structure and function.}
+
+% At the continuum scale, the description of order can be done with liquid crystal theory that commonly employs phenomenological models, such as Landau--de Gennes and Beris--Edwards,\cite{deGennes,Beris1994}, to capture orientational order and elastic distortions but assume chemical uniformity and near-equilibrium conditions. \textit{Extending these theories to incorporate composition-dependent elasticity, interfacial coupling, and non-equilibrium dynamics is essential for quantitative prediction across chemically diverse soft materials at different lengthscales.}
+
+% \textbf{Proposed Work}
+
+% Predictive design of chemically complex soft matter is hindered by three main challenges: (i) continuum theories rarely capture chemical heterogeneity and non-equilibrium dynamics, (ii) molecular models often lack direct connections to experimentally accessible observables, and (iii) machine learning has yet to be systematically integrated with theory to guide inverse design across multiscale parameter spaces. \textit{My research addresses these challenges through three complementary aims that integrate continuum modeling, molecular simulation, and physics-informed ML to establish quantitative links between composition, processing, and material response.}
+
+% \textbf{Aim 1. Continuum theories of orientational order in multicomponent systems}
+% Current liquid crystal theories describe single-component systems but cannot predict how composition and interfaces control orientational order and elasticity in realistic materials such as emulsions, polymer blends, and biomolecular condensates. This limitation prevents quantitative design of soft materials whose performance depends on interfacial orientation, structural stability, and flow response. I will develop continuum models that couple orientational order with local composition and interfacial curvature to capture these effects quantitatively. Building on my previous work on confined nematic phases and field-driven morphologies,\cite{Palacio_2020, Villada_Gil_2021, Yang_2022, Palacio_2023} the new formulation will connect the order description to concentration gradients and anchoring heterogeneity and describe how microstructure and defect topology evolve. Finite element and diffuse-interface simulations will be used to quantify defect evolution and phase coexistence under flow and surface tension gradients. This framework will extend the predictive reach of continuum theory and enable the rational design of multicomponent soft materials where composition and interfacial order determine function.
+
+% \textbf{Aim 2. Chemically informed coarse-grained models for compositionally complex soft matter}
+% Existing coarse-grained models rarely capture how chemical composition governs mesoscale order and mechanical response in mixtures. As a result, parameters that describe elasticity and interfacial behavior are often treated as empirical rather than derived from molecular structure. I will develop chemically-informed coarse-graining strategies that connect molecular topology and polarity\cite{Palacio_2025} to continuum-scale elastic and interfacial descriptors. The method will use enhanced sampling and targeted perturbations of the orientational order tensor to quantify the energetic cost of composition- and orientation-dependent deformations. ML models will then identify transferable relationships between molecular features and effective macroscopic properties. The outcome will be validated coarse-grained models capable of predicting how chemistry and concentration shape phase stability, defect morphology, and optical properties in multicomponent soft materials.
+
+% % \begin{wrapfigure}{R}{0.55\textwidth}
+% %     \vspace{-0.85\baselineskip}  % move up
+% %     \includegraphics[width=0.5\textwidth]{fig/fig2.png}
+% %     %\vspace{-4mm} % spacing between figure and caption
+% %     %\caption{}
+% %     \vspace{-0.5\baselineskip}    % tighten below the figure
+% % \end{wrapfigure}
+
+% \textbf{Aim 3. Physics-informed learning for Soft Matter}
+% I will use physics-informed and operator-discovery machine learning to extend theoretical models of multicomponent soft materials. Neural networks will be trained to solve coupled field equations for composition, transport, and orientational order while enforcing conservation laws and thermodynamic consistency. Operator-regression methods will extract reduced constitutive relations from simulation and experimental data, linking composition and interfacial structure to effective transport and mechanical behavior.\cite{Oommen2024} The resulting physics-consistent surrogate models will reproduce measurable properties such as phase stability, optical response,\cite{Chen_2024} and rheology, enabling rapid prediction and inverse design of complex formulations including food systems.
+
+% \textbf{Impact and Future Directions} 
+% \textit{Together, these aims establish a unified framework for predictive modeling of complex soft materials across molecular to continuum scales.} By combining physical theory, molecular simulation, and machine learning, the proposed research will generate transferable tools for interpreting experiments and guiding material design. In the long term, \textit{my program will define an open, data-driven approach to chemical engineering of soft matter}, enabling quantitative prediction of processing–structure–property relationships in multicomponent formulations. \textit{This foundation will support an independent, internationally connected research group focused on theory-guided discovery of sustainable soft materials and complex fluids.}
+
+% % ICL
+% \textbf{Potential Funding Sources}
+% I will pursue funding opportunities through a variety of programs that have emphasis in the fundamental aspects of my research program in order to expand soft matter theory, and in the applications of these methods onto real-world systems. Core support will be sought through the UK Research and Innovation (UKRI) portfolio, including the Engineering and Physical Sciences Research Council (EPSRC) and the Biotechnology and Biological Sciences Research Council (BBSRC), whose programs in soft matter, complex fluids, and data-driven discovery align closely with my research program. Early career awards such as the UKRI Future Leaders Fellowship and the Royal Society University Research Fellowship provide strong mechanisms for establishing an independent group. I will also target European Research Council (ERC) Starting Grants and Horizon Europe initiatives that promote AI-enabled and sustainable materials research. Complementary engagement with the Henry Royce Institute, the Faraday Institution, and industrial partners in formulation and materials design will foster translational impact. As a Colombian woman scientist, I will further pursue fellowships and networks that advance diversity and international collaboration, including the L’Oréal–UNESCO For Women in Science and Royal Society UK–Latin America partnerships.
+
+\renewcommand*{\bibfont}{\footnotesize}
+\vspace{-0.5em}
+\renewcommand{\bibsection}{\section*{References}}
+
+\bibliographystyle{unsrtnat}
+\bibliography{beckman_ref}
+
+
+\end{document}
