@@ -1,0 +1,83 @@
+
+\usepackage[  paper=a4paper,
+  left=18mm, right=18mm,
+  top=16mm, bottom=20mm,
+  includehead, includefoot,
+  headheight=10pt,    % header box height
+  headsep=6pt,        % gap between header and text
+  footskip=4pt]{geometry}
+
+\usepackage[T1]{fontenc}
+%\usepackage{charter} % Use the EB Garamond font
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
+
+\usepackage{doi}
+
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,pdfnewwindow=true,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage[skip=4pt plus1pt, indent=0pt]{parskip}
+
+\usepackage[plain]{flexbib}   % (this English-only version)
+\nobibliography{refs.bib}  % read the .bib but don't 
+
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+\titleformat{\section}{\bfseries\uppercase}{}{}{}[\titlerule]
+\titlespacing{\section}{0pt}{4pt}{4pt}
+\titleformat{\subsection}{}{}{}{}
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat*{\subsubsection}{\itshape}
+
+\usepackage[shortlabels]{enumitem}
+\setlist[itemize]{noitemsep}
+
+\usepackage{ifthen}
+
+\usepackage{fancyhdr}
+\fancyhf{} % clear header and footer
+\renewcommand{\headrulewidth}{0pt}% suppress line after header
+\fancyfoot[L]{\footnotesize\ifthenelse{\value{page}=1}{Last updated: \today}{CV\enspace\textbullet\enspace V. Palacio-Betancur}}
+\fancyfoot[R]{\thepage\ of \pageref{mylastpage}} % 
+
+\pagestyle{fancy} % choose the style
+
+\pdfgentounicode=1
+
+% Enforce margins and no hyphenation with these
+ \hyphenpenalty=1000
+ \tolerance=500
+ \emergencystretch=0.5em
+
+\usepackage{ragged2e}
+\usepackage[none]{hyphenat}
+\usepackage[final]{microtype}
+
+\usepackage{etaremune}
+\makeatletter
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{
+  label=[\arabic*],
+  resume,
+  itemsep=\bibsep,parsep=0pt,partopsep=0pt,
+  topsep=0pt,
+  wide=0pt
+}
+\newenvironment{bibenum*}
+  {\renewcommand\labelenumi{\bf\theenumi.}%
+   \etaremune[
+     topsep=0pt,
+     itemsep=\bibsep,
+     parsep=0pt,partopsep=0pt,
+     labelwidth=0pt,
+     labelsep=5.475pt,
+     itemindent=5.475pt,
+     leftmargin=0pt,
+   ]\renewcommand{\makelabel}[1]{##1\hss}%
+}
+  {\endetaremune}
+  
