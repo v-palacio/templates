@@ -1,7 +1,7 @@
 # CV template
 ### Viviana Palacio. 2025.
 
-I created this TeX template based on Nick's CV. 
+I created this TeX template based on Nick's CV. Either upload .tex and .sty files to your own Overleaf project, or use them to compile locally with pdfLaTeX.
 Some details:
 - References are handled with the flexbib package to generate full citations in line instead of as a separate block at the end of the document. 
 - I suggest using JabRef or a reference manager to format all your fields and generate a clean .bib file. 
