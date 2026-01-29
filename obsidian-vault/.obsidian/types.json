@@ -1,0 +1,12 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "email": "text",
+    "city": "text",
+    "date": "date",
+    "haveIpublished": "checkbox",
+    "publication_name": "multitext"
+  }
+}

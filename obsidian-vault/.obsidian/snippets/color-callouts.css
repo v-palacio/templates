@@ -1,0 +1,8 @@
+/* Color only the callout title text */
+.hl-yellow  .callout-title-inner { color: #ffd400; }
+.hl-green   .callout-title-inner { color: #5fb236; }
+.hl-blue    .callout-title-inner { color: #2ea8e5; }
+.hl-red     .callout-title-inner { color: #ff6666; }
+.hl-purple  .callout-title-inner { color: #e56eee; }
+.hl-orange  .callout-title-inner { color: #f19837; }
+.hl-default .callout-title-inner { color: var(--text-normal); }
